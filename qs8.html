@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Javascript funciton performing events</title>
+</head>
+<body>
+
+<div id="myDIV">Bangladesh</div>
+<p><button onclick="myFunction()">Click Me</button>
+<button onclick="changecolor()">Chance Color</button></p>
+<p onmouseenter="mouseoverbackground()" onmouseleave="backgroundremove()">Swap Background Color</p>
+<button onclick="createtag()">Create Tag</button>
+<button onclick="deltetag()">Delete Tag</button>
+<p onmouseover="mouseovercreate()">Mouse Hover To Create Tag</p>
+<p onmouseover="mouseoverdelete()">Mouse Hover To Delete Tag</p>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.innerHTML === "Bangladesh") {
+    x.innerHTML = "Dhaka is the capital!";
+  } else {
+    x.innerHTML = "Bangladesh";
+  }
+}
+
+function changecolor(){
+document.getElementById("myDIV").style.color = "blue";
+
+}
+
+function createtag(){
+  var tag = document.createElement("P");
+  tag.innerHTML = "Newly Added";
+  tag.id = "para";
+  document.body.appendChild(tag);
+}
+function deltetag(){
+
+  document.getElementById("para").remove();
+ 
+}
+
+function mouseoverbackground(){
+
+	document.body.style.backgroundColor = "red";
+
+}
+function backgroundremove(){
+	document.body.style.backgroundColor = "";
+}
+function mouseovercreate(){
+
+   var tag = document.createElement("H2");
+   tag.innerHTML = "Newly Added Header";
+   tag.id = "header";
+   document.body.appendChild(tag);
+ 
+}
+function mouseoverdelete(){
+
+  document.getElementById("header").remove();
+ 
+}
+</script>
+
+</body>
+</html>
+
