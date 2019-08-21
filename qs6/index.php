@@ -21,12 +21,12 @@ $allresult = $conn->query($fetch_sql);
                         <th>Result</th>
                     </tr>
                     <?php 
-        if ($allresult->num_rows > 0) {
-            // output data of each row
-            while($row = $allresult->fetch_assoc()) {
-               
-        ?>
-                    <tr>
+                        if ($allresult->num_rows > 0) {
+                            // output data of each row
+                            while($row = $allresult->fetch_assoc()) {
+                            
+                        ?>
+                      <tr>
                         <td><?php  echo $row["class_id"];?></td>
                         <td><?php  echo $row["name"];?></td>
                         <td><?php  echo $row["department"];?></td>
